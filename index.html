@@ -2,85 +2,82 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Курортный город Седона</title>
+    <title>Город Седона</title>
   </head>
   <body>
     <header class="page-header">
-      <nav class="navigation">
-        <img class="logo" src="#" alt="Логотип курортного города Седона">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+      <img class="logo" src="#" alt="Логотип города Седона">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="index.html">Главная</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#">О седоне</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          <li class="navbar-item">
+            <a class="navbar-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+      </nav>
+      <nav class="usernav">
+        <ul class="usernav-list">
+          <li class="usernav-item">
+            <a href="#" class="usernav-link">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="usernav-item">
+            <a href="#" class="usernav-link">
               <span class="visually-hidden">В избранном</span>
             </a>
+            <span class="usernav-value">12</span>
           </li>
-          <li class="navigation-item">
-            <span class="visually-hidden">Каталог гостиниц</span>
-            <a class="navigation-link" href="catalog.html">Хочу сюда!</a>
+          <li class="usernav-item">
+            <a href="catalog.html" class="usernav-link">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-index">
-      <h1 class="visually-hidden">Курортный город Седона</h1>
-      <div class="promo"></div> <!--не вижу особого смысла делать секцию, это просто промо-баннер. Можно было бы вставить просто картинкой, но тут несколько слоев, получится ли?-->
-
+      <h1 class="visually-hidden">Город Седона</h1>
+      <section class="welcome-banner">
+        <h2>Добро пожаловать в Седону</h2>
+        <img src="#" alt="Приветственное сообщение">
+      </section>
       <section class="advantages">
-        <h2>Преимущества города Седона</h2>
+        <h2>Преимущества</h2>
         <div class="slogan">
           <p class="slogan-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="slogan-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
-        <div class="container">
-          <div class="sights">
-            <p class="sight-title">Настоящий городок</p>
-            <p class="sight-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          </div>
-          <img src="#" alt="Город Седона"> <!--Здесь конечно больше как дек. элемент-->
-        </div>
-        <ul class="properties">
+        <ul class="properties-list">
           <li class="properties-item">
-            <span class="properties-title">Небольшая площадь</span>
+            <h3 class="properties-title">Настоящий городок</h3>
+            <p class="properties-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </li>
+          <li class="properties-item">
+            <h3 class="properties-title">Небольшая площадь</h3>
             <p class="properties-description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="properties-item">
-            <span class="properties-title">Красивая дорога</span>
+          <li class="properties-list">
+            <h3 class="properties-title">Красивая дорога</h3>
             <p class="properties-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="properties-item">
-            <span class="properties-title">Мало туристов</span>
+          <li class="properties-list">
+            <h3 class="properties-title">Мало туристов</h3>
+            <p class="properties-description">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+          <li class="properties-list">
+            <h3 class="properties-title">Там есть  мост дьявола</h3>
             <p class="properties-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
-        <div class="container">
-          <div class="sights">
-            <p class="sight-title">Там есть  мост дьявола</p>
-            <p class="sight-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          </div>
-          <img src="#" alt="Мост Дьявола">
-        </div>
         <div class="slogan">
           <p class="slogan-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-          <p class="slogan-description">Опытный персонал и качественное обслуживание!</p>
+          <p class="slogan-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
         </div>
       </section>
-
       <section class="servises">
         <h2 class="visually-hidden">Предоставляемые услуги</h2>
         <ul class="servises-list">
@@ -100,7 +97,7 @@
       </section>
       <section class="booking">
         <h2 class="visually-hidden">Поиск Гостиницы</h2>
-        <span class="booking-title">Заинтересовались?</span>
+        <p class="booking-title">Заинтересовались?</p>
         <p class="booking-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="booking-link" href="catalog.html"></a>
       </section>
@@ -110,27 +107,31 @@
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
-          <input type="email" name="e-mail" placeholder="Ваш e-mail" >
+          <label class="visually-hidden" for="subscribe-form-email">Ввести электронную почту</label>
+          <input id="subscribe-form-email" type="email" name="email" placeholder="Ваш email" required>
           <button type="submit">Подписаться</button>
         </form>
       </section>
-      <div class="wrapper"> <!--Тут нужна будет оббертка, клас пока просто прописал, дальше доделаю если что не так-->
+      <div class="bottom-footer">
         <ul class="socials">
           <li class="socials-item">
-            <span class="visually-hidden">Вконтакте</span>
-            <a href="https://vk.com/htmlacademy" class="socials-link"></a>
+            <a href="https://vk.com/htmlacademy" class="socials-link">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
           <li class="socials-item">
-            <span class="visually-hidden">Телеграмм</span>
-            <a href="https://t.me/htmlacademy" class="socials-link"></a>
+            <a href="https://t.me/htmlacademy" class="socials-link">
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
           </li>
           <li class="socials-item">
-            <span class="visually-hidden">Ютуб</span>
-            <a href="https://www.youtube.com/user/htmlacademyru" class="socials-link"></a>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="socials-link">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
           </li>
         </ul>
         <a class="page-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a href="https://htmlacademy.ru" class="page-footer-copyright">
+        <a class="page-footer-copyright" href="https://htmlacademy.ru">
           <img src="#" alt="Разработано html-академией">
         </a>
       </div>
