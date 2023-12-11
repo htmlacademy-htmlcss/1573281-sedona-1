@@ -18,19 +18,13 @@
 
 /*Общие правила*/
 
-html {
-  background-color: #83b3d31f;
-}
 body{
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 400;
   color: #333333;
-  background-color: #ffffff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
-
-  margin: 0 auto;  /*Предварительно добавил для лучшего визуального восприятия*/
-  max-width: 1200px;
+  background-color: #f2f2f2;
 }
 
 .visually-hidden {
@@ -58,10 +52,19 @@ body{
   border: none;
 }
 
-/*Навигация по сайту*/
+/*Главный контейнер*/
+.main-container {
+  background-color: #ffffff;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+}
+
 .main-index {
   text-align: center;
 }
+
+/*Навигация по сайту*/
 
 .navbar-item {
   list-style: none;
@@ -81,21 +84,9 @@ body{
   list-style: none;
 }
 
-.search {
-  display:block;
-  width: 18px;
-  height: 18px;
-  background-image: url("../images/search-icon.svg");  /*Так можно делать или через псевдо элемент только?*/
-}
-
 .favorite {
-  display: block;
-  width: 18px;
-  height: 17px;
   text-decoration: none;
-  background-image: url("../images/heart-icon.svg"); /*Так можно делать или через псевдо элемент только?*/
 }
-
 .favorite-value {
   font-size: 10px;
   line-height: 10px;
@@ -107,21 +98,15 @@ body{
 /*Баннер на главной*/
 
 .welcome-banner {
-  background-color: #82b3d3;
-  background-image: url("../images/banner-background.jpg");
-
-}
-
-.welcome-banner-divider {
-  width: 1200px;
-  height: 57px;
-  background-image: url("../images/banner-divider.svg");
+  background-color: #6f8da1;
+  background: url("../images/banner-divider.svg") no-repeat bottom,
+  url("../images/banner-background.jpg") no-repeat;
 }
 
 /*Секция: преимущества*/
 
 .slogan-title {
-  color:#000000;
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -135,37 +120,39 @@ body{
 
 .advantages-item {
   list-style: none;
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.20);
+}
+
+.advantages-item:nth-child(even){
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-accent {
+  background-color: #82B3D3;
+  color: #ffffff;
 }
 
 .advantages-title {
-  color:#000000;
+  color: #000000;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
-.advantages-item:first-child,
-.advantages-item:last-child {
-  background-color: #82b3d3;
-  color:#ffffff;
+.advantages-item-accent .advantages-title {
+  color: #ffffff;
 }
 
-.advantages-item:first-child .advantages-title,
-.advantages-item:last-child .advantages-title {
-  color:#ffffff;
-}
-
-.advantages-item:nth-child(3){
-  background-color: rgba(131, 179, 211, 0.20);
-}
 
 /*Секция: предоставляемые услуги*/
 
 .servises-item {
   list-style: none;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.servises-item:nth-child(even){
+  background-color: #ffffff;
 }
 
 .servises-title {
@@ -176,18 +163,14 @@ body{
   text-transform: uppercase;
 }
 
-.servises-item:nth-child(2){
-  background-color: inherit;
-}
-
 
 /*Секция: бронирование*/
 
 .booking-title {
   color: #000000;
   font-size: 30px;
-  line-height: 36px;
   font-weight: 700;
+  line-height: 36px;
   text-transform: uppercase;
 }
 
@@ -196,10 +179,17 @@ body{
   line-height: 26px;
 }
 
+.booking-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+
 /*Секция: подписка*/
 .subscribe {
-  background-color: #82b3d3;
+  background-color: #6f8da1;
   background-image: url("../images/subscribe-background.jpg");
+  background-repeat: no-repeat;
   color: #ffffff;
 }
 .subscribe-title {
@@ -212,13 +202,6 @@ body{
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 400;
-}
-
-.subscribe-button{
-  font-size: 20px;
-  line-height: 36px;
-  background-color: #82b3d3;
 }
 
 .subscribe-input-field {
@@ -230,9 +213,152 @@ body{
   border-radius: 4px 0 0 4px;
 }
 
-.subscribe-input-field::placeholder {
-  color:#000000;
-  opacity: 0.6;
+.subscribe-button{
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82b3d3;
+}
+
+/*Каталог: обертка для фона*/
+
+.filter-wrapper {
+  background-color: #6f8da1;
+  background-image: url("../images/filter-background.jpg");
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+/*Каталог: Заголовок */
+.heading{
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+
+}
+
+/*Каталог: хлебные крошки */
+.breadcrumbs-item {
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+/*Каталог: фильтр*/
+.hotel-filter-group {
+  border:0;
+}
+
+.hotel-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.hotel-filter-label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.price-filter-label {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.apply-button {
+  background-color: #82b3d3;
+}
+
+.reset-button {
+  background-color: transparent;
+}
+
+/*Каталог: заголовок и селект*/
+
+.catalog-heading {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.properties-sort {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 21px;
+  color:inherit;
+}
+
+/*Каталог: карточки гостиниц*/
+
+.hotel-card {
+  list-style: none;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
+}
+
+.rating-value {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.favorite-button {
+  background-color: #82b3d3;
+}
+
+
+/*Каталог: Пагинация*/
+.pagination-item {
+  list-style: none;
+}
+
+.pagination-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #ffffff;
+  background-color: #82b3d3;
+  text-decoration: none;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.ellipsis {
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+
+/*Каталог: Подписаться*/
+.catalog-subscribe {
+  background-image: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.catalog-subscribe .subscribe-description {
+  color: #333333;
 }
 
 /*Футер*/
@@ -240,5 +366,5 @@ body{
 text-decoration: none;
 font-size: 40px;
 line-height: 40px;
-color:#000000;
+color: #000000;
 }
