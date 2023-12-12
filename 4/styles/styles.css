@@ -271,6 +271,13 @@ body{
   opacity: 0.3;
 }
 
+.price-value {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 .apply-button {
   background-color: #82b3d3;
 }
