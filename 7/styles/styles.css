@@ -669,10 +669,11 @@ body{
 }
 
 .rating-value {
-  padding: 8px 22px;
+  padding: 8px 7px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   background-color: #f2f2f2;
   border-radius: 4px;
 }
@@ -682,22 +683,23 @@ body{
 }
 
 .more-button {
-  padding-left: 26px;
-  padding-right: 26px;
+  padding-left: 7px;
+  padding-right: 7px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .favorite-button {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 7px;
+  padding-right: 7px;
   border-radius: 4px;
   background-color: #82b3d3;
 }
 
 .favorite-button-active {
   background-color: var(--is-favorite);
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 /*Каталог: Пагинация*/
