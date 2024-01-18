@@ -181,6 +181,7 @@ body{
 
 .navbar-link-current:hover {
   opacity: 1;
+  cursor: text;
 }
 
 .navbar-link-current:focus {
