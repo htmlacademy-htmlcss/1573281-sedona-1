@@ -120,6 +120,24 @@ body{
   bottom: -6px;
 }
 
+.page-logo-link:hover {
+  opacity: 0.7;
+}
+
+.page-logo-link:active {
+  opacity: 0.5;
+}
+
+.current-page-logo:focus {
+  outline: 0;
+  opacity: 1;
+}
+
+.current-page-logo:hover {
+  cursor: text;
+  opacity: 1;
+}
+
 .navbar-list {
   display: flex;
   flex-wrap: wrap;
@@ -161,6 +179,14 @@ body{
   border-bottom: 2px solid #756257;
 }
 
+.navbar-link-current:hover {
+  opacity: 1;
+}
+
+.navbar-link-current:focus {
+  outline: 0;
+}
+
 /*Пользовательская навигация*/
 
 .usernav {
@@ -190,6 +216,7 @@ body{
   justify-content: center;
   align-items: center;
   color: #000000;
+  background: url("../images/search-icon.svg") no-repeat center;
 }
 
 .favorite {
@@ -200,6 +227,7 @@ body{
   margin-right: 20px;
   text-decoration: none;
   color: #000000;
+  background: url("../images/heart-icon.svg") no-repeat center;
 }
 
 .favorite-value {
@@ -498,6 +526,14 @@ body{
   border-radius: 4px 0 0 4px;
 }
 
+.subscribe-input-field:hover {
+  background-color: #e6e6e6;
+}
+
+.subscribe-input-field:focus {
+  color: #000000;
+  outline: 2px solid #000000;
+}
 .subscribe-button{
   padding-left: 50px;
   padding-right: 50px;
@@ -591,7 +627,16 @@ body{
 }
 
 .breadcrumbs-link:active {
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+}
+
+.breadcrumbs-link-current:hover,
+.breadcrumbs-link-current:focus,
+.breadcrumbs-link-current:active
+{
+  opacity: 1;
+  cursor: text;
+  outline: 0;
 }
 
 /*Каталог: фильтр*/
@@ -709,6 +754,7 @@ body{
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   appearance: none;
+  background-color: #ffffff;
   background-image: url("../images/select-icon.svg");
   background-position: right 20px center;
   background-repeat: no-repeat;
@@ -814,6 +860,15 @@ body{
   text-decoration: none;
 }
 
+.hotel-card-link:hover {
+  opacity: 0.7;
+}
+
+.hotel-card-link:active {
+  opacity: 0.5;
+}
+
+
 .hotel-card-title {
   margin: 0;
   font-size: 24px;
@@ -841,8 +896,14 @@ body{
   align-self:stretch;
 }
 
-.four-stars {
-  background-image: url(../images/four-stars.svg);
+.one-stars {
+  background-image: url(../images/one-stars.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.two-stars {
+  background-image: url(../images/two-stars.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -853,8 +914,14 @@ body{
   background-size: cover;
 }
 
-.two-stars {
-  background-image: url(../images/two-stars.svg);
+.four-stars {
+  background-image: url(../images/four-stars.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.five-stars {
+  background-image: url(../images/five-stars.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -946,10 +1013,13 @@ body{
   background-color: #f2f2f2;
 }
 
-.pagination-link-current:hover {
+.pagination-link-current:hover,
+.pagination-link-current:focus {
   color: #000000;
   background-color: #f2f2f2;
   outline: 0;
+  opacity: 1;
+  cursor: text;
 }
 
 .ellipsis {
@@ -991,21 +1061,32 @@ body{
   list-style-type: none;
 }
 
-.socials-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.socials-link::after {
+  content: '';
+  display: block;
   width: 47px;
   height: 40px;
-  color: #83b3d3;
+  background-color: #83b3d3;
 }
 
-.socials-link:hover{
-  color: #68a2ca;
+.vkontakte::after {
+  mask: url("../images/vk-icon.svg") no-repeat center;
 }
 
-.socials-link:focus {
-  color: rgba(104, 162, 202, 0.3);
+.telegramm::after {
+  mask: url("../images/tg-icon.svg") no-repeat center;
+}
+
+.youtube::after {
+  mask: url("../images/youtube-icon.svg") no-repeat center;
+}
+
+.socials-link:hover::after {
+  background-color: #68a2ca;
+}
+
+.socials-link:active::after {
+  opacity: 0.3;
 }
 
 .page-footer-tel {
@@ -1015,14 +1096,23 @@ body{
   color: #000000;
 }
 
-.page-footer-copyright {
-  color: #000000;
+.page-footer-copyright::after {
+  content: '';
+  display: block;
+  width: 115px;
+  height: 34px;
+  background-color: #000000;
+  mask: url("../images/htmlacademy-logo.svg") no-repeat center;
 }
 
-.page-footer-tel:hover, .page-footer-copyright:hover {
+.page-footer-copyright:hover::after, .page-footer-copyright:focus::after {
+  background-color: #756157;
+}
+
+.page-footer-tel:hover, .page-footer-tel:focus {
   color: #756157;
 }
 
-.page-footer-tel:focus, .page-footer-copyright:focus {
-  color: rgba(117, 97, 87, 0.3)
+.page-footer-tel:active, .page-footer-copyright:active::after {
+  opacity: 0.3;
 }
