@@ -8,8 +8,8 @@
 <body>
   <div class="main-container page-container">
     <header class="page-header">
-      <a class="page-header-logo" href="index.html">
-        <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
+      <a href="index.html" class="page-logo-link">
+        <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
       <nav class="navbar">
         <ul class="navbar-list">
@@ -20,23 +20,22 @@
             <a class="navbar-link" href="#">О Седоне</a>
           </li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#">Гостиницы</a>
+            <a class="navbar-link navbar-link-current" href="#">Гостиницы</a>
           </li>
         </ul>
       </nav>
       <nav class="usernav">
         <ul class="usernav-list">
           <li class="usernav-item">
-            <a href="#" class="search">
+            <a href="#" class="usernav-link search">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="usernav-item">
-            <a href="#" class="favorite">
+            <a href="#" class="usernav-link favorite">
               <span class="visually-hidden">В избранном</span>
               <span class="favorite-value">12</span>
             </a>
-
           </li>
           <li class="usernav-item">
             <a href="catalog.html" class="button">Хочу сюда!</a>
@@ -51,10 +50,11 @@
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link breadcrumbs-icon" href="index.html">
               <span class="visually-hidden">Главная</span>
+              <svg width="13" height="15" viewBox="0 0 13 15" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" fill="currentColor" /><path d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" fill="currentColor"/></svg>
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Гостиницы</a>
+            <a class="breadcrumbs-link breadcrumbs-link-current" href="#">Гостиницы</a>
           </li>
         </ol>
         <section class="hotel-filter">
@@ -147,7 +147,7 @@
             <span class="hotel-card-price">От 4000 ₽</span>
             <a class="button more-button" href="#">Подробнее</a>
             <button class="button favorite-button" type="button">В избранное</button>
-            <span class="hotel-card-stars"></span>
+            <span class="hotel-card-stars four-stars"></span>
             <span class="rating-value">Рейтинг: 8,5</span>
           </li>
           <li class="hotel-card">
@@ -159,7 +159,7 @@
             <span class="hotel-card-price">От 5000 ₽</span>
             <a class="button more-button" href="#">Подробнее</a>
             <button class="button favorite-button favorite-button-active" type="button">В избранном</button>
-            <span class="hotel-card-stars"></span>
+            <span class="hotel-card-stars four-stars"></span>
             <span class="rating-value">Рейтинг: 9,2</span>
           </li>
           <li class="hotel-card">
@@ -171,7 +171,7 @@
             <span class="hotel-card-price">От 2500 ₽</span>
             <a class="button more-button" href="#">Подробнее</a>
             <button class="button favorite-button" type="button">В избранное</button>
-            <span class="hotel-card-stars"></span>
+            <span class="hotel-card-stars three-stars"></span>
             <span class="rating-value">Рейтинг: 6,9</span>
           </li>
           <li class="hotel-card">
@@ -183,7 +183,7 @@
             <span class="hotel-card-price">От 1500 ₽</span>
             <a class="button more-button" href="#">Подробнее</a>
             <button class="button favorite-button" type="button">В избранное</button>
-            <span class="hotel-card-stars"></span>
+            <span class="hotel-card-stars two-stars"></span>
             <span class="rating-value">Рейтинг: 5,0</span>
           </li>
         </ul>
@@ -219,27 +219,27 @@
       </section>
     </main>
     <footer class="page-footer">
-        <ul class="socials">
-          <li class="socials-item">
-            <a class="socials-link vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="socials-item">
-            <a class="socials-link telegramm" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграмм</span>
-            </a>
-          </li>
-          <li class="socials-item">
-            <a class="socials-link youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-        </ul>
-        <a class="page-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="page-footer-copyright" href="https://htmlacademy.ru">
-          <span class="visually-hidden">Разработано html-академией</span>
-        </a>
+      <ul class="socials">
+        <li class="socials-item">
+          <a class="socials-link vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link telegramm" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Телеграмм</span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-link youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="page-footer-copyright" href="https://htmlacademy.ru">
+        <span class="visually-hidden">Разработано html-академией</span>
+      </a>
     </footer>
   </div>
 </body>
