@@ -8,13 +8,13 @@
   <body>
     <div class="main-container">
       <header class="page-header">
-        <a href="#" class="page-logo-link current-page-logo">
+        <a href="#" class="page-logo-link current-page-logo"  tabindex="-1">
           <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <a class="navbar-link navbar-link-current" href="#">Главная</a>
+              <a class="navbar-link navbar-link-current" href="#" tabindex="-1">Главная</a>
             </li>
             <li class="navbar-item">
               <a class="navbar-link" href="#">О Седоне</a>
@@ -84,24 +84,24 @@
             </li>
           </ul>
         </section>
-        <section class="servises">
+        <section class="services">
           <h2 class="visually-hidden">Предоставляемые услуги</h2>
-          <div class="servises-slogan">
-            <p class="servises-slogan-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
-            <p class="servises-slogan-description">Опытный персонал и качественное обслуживание!</p>
+          <div class="services-slogan">
+            <p class="services-slogan-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+            <p class="services-slogan-description">Опытный персонал и качественное обслуживание!</p>
           </div>
-          <ul class="servises-list">
-            <li class="servises-item sevvises-hotel">
-              <h3 class="servises-title">Жильё</h3>
-              <p class="servises-description">Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!</p>
+          <ul class="services-list">
+            <li class="services-item services-hotel">
+              <h3 class="services-title">Жильё</h3>
+              <p class="services-description">Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в кино!</p>
             </li>
-            <li class="servises-item food-hotel">
-              <h3 class="servises-title">Еда</h3>
-              <p class="servises-description">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
+            <li class="services-item food-hotel">
+              <h3 class="services-title">Еда</h3>
+              <p class="services-description">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="servises-item souvenirs-hotel">
-              <h3 class="servises-title">Сувениры</h3>
-              <p class="servises-description">Не только китайского,<br> но и настоящего местного производства!</p>
+            <li class="services-item souvenirs-hotel">
+              <h3 class="services-title">Сувениры</h3>
+              <p class="services-description">Не только китайского,<br> но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
@@ -144,6 +144,51 @@
             <span class="visually-hidden">Разработано html-академией</span>
           </a>
       </footer>
+
+      <div class="modal-wrapper" style="display: none;">
+        <section class="modal-section">
+          <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+          <button type="button" class="modal-close">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+          <form method="post" action="https://echo.htmlacademy.ru/" class="modal-form">
+            <legend class="modal-form-legend">Поиск гостиницы в Седоне</legend>
+            <ul class="modal-form-list">
+              <li class="modal-form-item check-in-date-item">
+                <label for="check-in-date-id">Дата Заезда:</label>
+                <input type="text" name="check-in-date" id="check-in-date-id" value="Укажите дату" class="modal-form-input check-in-date-input">
+                <p class="check-in-date-description">Мы не можем отправить вас в прошлое.</p>
+              </li>
+              <li class="modal-form-item check-out-date-item">
+                <label for="check-out-date-id">Дата Выезда:</label>
+                <input type="text" name="check-out-date" id="check-out-date-id" value="Укажите дату" class="modal-form-input check-out-date-input">
+                <p class="check-out-date-description">На эти даты есть свободные номера. Пока есть.</p>
+              </li>
+              <li class="modal-form-item number-of-adults-item">
+                <label for="number-of-adults-id">Взрослые:</label>
+                <input type="number" name="number-of-adults" id="number-of-adults-id" value="2" class="modal-form-input number-of-adults">
+                <button type="button" class="modal-button number-of-adults-increase">
+                  <span class="visually-hidden">Увеличить количество взрослых</span>
+                </button>
+                <button type="button" class="modal-button number-of-adults-decrease">
+                  <span class="visually-hidden">Уменьшить количество взрослых</span>
+                </button>
+              </li>
+              <li class="modal-form-item number-of-children-item">
+                <label for="number-of-children-id">Дети:</label>
+                <input type="number" name="number-of-children" id="number-of-children-id" value="2" class="modal-form-input number-of-children">
+                <button type="button" class="modal-button number-of-children-increase">
+                  <span class="visually-hidden">Увеличить количество детей</span>
+                </button>
+                <button type="button" class="modal-button number-of-children-decrease">
+                  <span class="visually-hidden">Уменьшить количество детей</span>
+                </button>
+              </li>
+            </ul>
+            <button tpye="submit" class="button modal-form-submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
 </body>
 </html>
