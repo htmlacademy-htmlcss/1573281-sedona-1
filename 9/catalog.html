@@ -97,35 +97,31 @@
                 <span class="control-label">Апартаменты</span>
               </label>
             </fieldset>
-            <fieldset class="hotel-filter-group price-filter">
-             <legend class="hotel-filter-title">Стоимость, ₽:</legend>
-                <ul class="price-filter-list">
-                  <li class="price-filter-item">
-                    <label  class="price-filter-label min-price-label" for="lowprice-id">
-                      <span class="visually-hidden">Минимальная стоимость</span>
-                      от
-                    </label>
-                    <input class="price-value price-value-min" type="number" id="lowprice-id" name="lowprice" value="0">
-                  </li>
-                  <li class="price-filter-item">
-                    <label class="price-filter-label max-price-label" for="highprice-id">
-                      <span class="visually-hidden">Максимальная стоимость</span>
-                      до
-                    </label>
-                    <input  class="price-value price-value-max" type="number" id="highprice-id" name="highpice" value="9000">
-                  </li>
-                </ul>
-                <div class="range">
-                  <div class="range-scale">
-                    <div class="range-bar" style="left: 0; width: 226px;">
-                      <button type="button" class="range-toggle toggle-min">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button type="button" class="range-toggle toggle-max">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
-                    </div>
+            <fieldset class="hotel-filter-group">
+              <legend class="hotel-filter-title">Стоимость, ₽:</legend>
+              <div class="price-filter-wrapper">
+                <label class="price-filter-label">
+                  <input class="price-value" type="number" name="low-price" value="0">
+                  <span class="text-meaning">от</span>
+                  <span class="visually-hidden">Минимальная стоимость</span>
+                </label>
+                <label class="price-filter-label">
+                  <input class="price-value" type="number" name="high-price" value="9000">
+                  <span class="text-meaning">до</span>
+                  <span class="visually-hidden">Максимальная стоимость</span>
+                </label>
+              </div>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 226px;">
+                    <button type="button" class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button type="button" class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
                   </div>
+                </div>
             </fieldset>
             <div class="filter-button-wrapper">
               <button class="button apply-button" type="submit">Применить</button>
