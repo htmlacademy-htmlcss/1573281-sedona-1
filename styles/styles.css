@@ -115,7 +115,7 @@ body{
   width: 140px;
   height: 70px;
   display: block;
-  margin-right: 28px;
+  margin-right: 29px;
   position: relative;
   margin-top: -6px;
   bottom: -6px;
@@ -336,6 +336,7 @@ body{
 
 .advantages-img {
   width: 800px;
+  height: 385px;
 }
 
 .advantages-item:nth-child(even):not(.advantages-item-accent){
@@ -425,6 +426,7 @@ body{
 }
 
 .services-title {
+  position: relative;
   margin: 0;
   margin-bottom: 30px;
   color: #000000;
@@ -434,22 +436,37 @@ body{
   text-transform: uppercase;
 }
 
-.services-hotel {
+.services-hotel::before {
+  position: absolute;
+  top: -103px;
+  left: 78px;
+  content: "";
+  display: block;
+  width: 76px;
+  height: 72px;
   background-image: url("../images/hotel-icon.svg");
-  background-repeat: no-repeat;
-  background-position: bottom 232px right 162px;
 }
 
-.food-hotel {
+.food-hotel::before {
+  position: absolute;
+  top: -102px;
+  left: 77px;
+  content: "";
+  display: block;
+  width: 75px;
+  height: 70px;
   background-image: url("../images/food-icon.svg");
-  background-repeat: no-repeat;
-  background-position: bottom 232px right 162px;
 }
 
-.souvenirs-hotel {
+.souvenirs-hotel::before {
+  position: absolute;
+  top: -102px;
+  left: 83px;
+  content: "";
+  display: block;
+  width: 65px;
+  height: 76px;
   background-image: url("../images/souvenirs-icon.svg");
-  background-repeat: no-repeat;
-  background-position: bottom 232px right 166px;
 }
 
 .services-description {
@@ -523,6 +540,7 @@ body{
 .subscribe-input-field {
   width: 452px;
   padding: 14px 20px;
+  flex-shrink: 0;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -567,7 +585,7 @@ body{
 
 .filter-wrapper {
   margin-bottom: 50px;
-  padding: 35px 70px 68px 70px;
+  padding: 35px 70px 70px 70px;
   background-color: #6f8da1;
   background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
@@ -603,17 +621,12 @@ body{
   background-image: url("../images/breadcrumbs-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
-  margin-left: 10px;
+  margin-left: 6px;
   margin-right: 10px;
   content: "";
 }
 
-.breadcrumbs-item:last-child {
-  margin-right: 0;
-}
-
-.breadcrumbs-icon svg {
-  vertical-align: middle;
+.breadcrumbs-icon {
 }
 
 .breadcrumbs-icon:hover {
@@ -755,6 +768,7 @@ body{
 
 .range-scale {
   position: relative;
+  width: 288px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -842,6 +856,10 @@ body{
   opacity: 0.3;
 }
 
+.hotel-filter-buttons {
+  margin-right: 11px;
+}
+
 .apply-button {
   display: block;
   min-width: 191px;
@@ -881,7 +899,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 58px;
+  margin-top: 55px;
   width: 250px;
 }
 
@@ -894,7 +912,7 @@ body{
 }
 
 .select-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1008,7 +1026,7 @@ body{
   padding:0;
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 16px 20px;
   list-style-type: none;
   margin-bottom: 80px;
 }
@@ -1025,8 +1043,9 @@ body{
 
 .hotel-card-img {
   width: 300px;
+  height: 212px;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hotel-card-link {
@@ -1181,7 +1200,7 @@ body{
 
 .ellipsis {
   display: block;
-  width: 60px;
+  min-width: 60px;
   text-align: center;
   padding-top: 15px;
   font-size: 22px;
@@ -1276,17 +1295,19 @@ body{
 /* Модальное окно*/
 .modal-wrapper {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   background-color: rgba(242, 242, 242, 0.8);
 }
 
 .modal-section {
   position: relative;
   width: 717px;
-  margin: auto;
   padding: 64px 70px;
   border-radius: 30px;
   background-color: #ffffff;
@@ -1303,6 +1324,9 @@ body{
   height: 52px;
   top: 64px;
   right: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0;
   border-radius: 50%;
   background-color: #f2f2f2;
@@ -1358,7 +1382,11 @@ body{
   line-height: 24px;
 }
 
-.modal-label-check-in, .modal-label-check-out {
+.modal-label-check-out {
+  margin-right: 19px;
+}
+
+.modal-label-check-in {
   margin-right: 24px;
 }
 
@@ -1369,6 +1397,7 @@ body{
 
 .modal-label-children  {
   margin-right: 10px;
+  max-width: 100px;
 }
 
 .modal-input {
@@ -1384,7 +1413,7 @@ body{
 
 .modal-input-check-in, .modal-input-check-out {
   flex-grow: 1;
-  padding: 12px 44px 12px 15px;
+  padding: 12px 44px 12px 20px;
   margin-bottom: 4px;
   background-image: url("../images/input-icon.svg");
   background-repeat: no-repeat;
@@ -1392,19 +1421,22 @@ body{
 }
 
 .modal-input-adult, .modal-input-children {
-  width: 110px;
-  padding: 14px 40px;
+  width: 31px;
+  padding: 14px 0;
   text-align: center;
 }
 
 .quantity-button {
-  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding:0;
   border: 0;
-  background-color: inherit;
+  background-color: #f2f2f2;
   cursor: pointer;
   color: rgba(117, 97, 87, 0.3);
+  padding: 0 10px;
 }
 
 .quantity-button:hover {
@@ -1412,15 +1444,11 @@ body{
 }
 
 .quantity-button:active {
-  opacity: 0.2;
+  color: rgba(0, 0, 0, 0.2);
 }
 
-.quantity-button-less {
-  right: 10px;
-}
-
-.quantity-button-more {
-  right: 78px;
+.quantity-button:disabled {
+  opacity: 0.3;
 }
 
 .modal-input::-webkit-outer-spin-button, .modal-input::-webkit-inner-spin-button {
@@ -1449,6 +1477,10 @@ body{
   background-color: #f2f2f2;
 }
 
+.modal-input:disabled {
+  opacity: 0.2;
+}
+
 .check-in-description {
   margin: 0;
   margin-bottom: 23px;
@@ -1466,6 +1498,10 @@ body{
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
+}
+
+.input-container {
+  display: flex;
 }
 
 .tooltip {
