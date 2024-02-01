@@ -263,7 +263,7 @@ button.button:active:not(:disabled), a.button:active:not(.button-disabled) {
 .welocme-banner-img {
   display: block;
   width: 458px;
-  height: auto;
+  height: 352px;
 }
 
 /*Секция: преимущества*/
