@@ -10,7 +10,7 @@
   <body>
     <div class="main-container page-container">
       <header class="page-header">
-        <a href="index.html" class="page-logo-link">
+        <a class="page-logo-link" href="index.html">
           <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
         <nav class="navbar">
@@ -29,18 +29,18 @@
         <nav class="usernav">
           <ul class="usernav-list">
             <li class="usernav-item">
-              <a href="#" class="usernav-link search">
+              <a class="usernav-link search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="usernav-item">
-              <a href="#" class="usernav-link favorite">
+              <a class="usernav-link favorite" href="#">
                 <span class="visually-hidden">В избранном</span>
                 <span class="favorite-value">12</span>
               </a>
             </li>
             <li class="usernav-item">
-              <button type="button" class="button">Хочу сюда!</button>
+              <button class="button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
@@ -114,7 +114,7 @@
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 226px;">
-                      <button type="button" class="range-toggle toggle-min">
+                      <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
                       <button type="button" class="range-toggle toggle-max">
@@ -151,7 +151,7 @@
                   <span class="visually-hidden">Показать во всю ширину</span>
                 </button>
               </li>
-              <li  class="view-sort-item">
+              <li class="view-sort-item">
                 <button class="view-sort-button view-sort-list" type="button">
                   <span class="visually-hidden">Показать списком</span>
                 </button>
@@ -168,7 +168,9 @@
               <span class="hotel-card-price">От 4000 ₽</span>
               <a class="button more-button" href="#">Подробнее</a>
               <button class="button favorite-button" type="button">В избранное</button>
-              <span class="hotel-card-stars four-stars"></span>
+              <span class="hotel-card-stars four-stars">
+                <span class="visually-hidden">4 звезды</span>
+              </span>
               <span class="rating-value">Рейтинг: 8,5</span>
             </li>
             <li class="hotel-card">
@@ -180,7 +182,9 @@
               <span class="hotel-card-price">От 5000 ₽</span>
               <a class="button more-button" href="#">Подробнее</a>
               <button class="button favorite-button favorite-button-active" type="button">В избранном</button>
-              <span class="hotel-card-stars four-stars"></span>
+              <span class="hotel-card-stars four-stars">
+                <span class="visually-hidden">4 звезды</span>
+              </span>
               <span class="rating-value">Рейтинг: 9,2</span>
             </li>
             <li class="hotel-card">
@@ -192,7 +196,9 @@
               <span class="hotel-card-price">От 2500 ₽</span>
               <a class="button more-button" href="#">Подробнее</a>
               <button class="button favorite-button" type="button">В избранное</button>
-              <span class="hotel-card-stars three-stars"></span>
+              <span class="hotel-card-stars three-stars">
+                <span class="visually-hidden">3 звезды</span>
+              </span>
               <span class="rating-value">Рейтинг: 6,9</span>
             </li>
             <li class="hotel-card">
@@ -204,7 +210,9 @@
               <span class="hotel-card-price">От 1500 ₽</span>
               <a class="button more-button" href="#">Подробнее</a>
               <button class="button favorite-button" type="button">В избранное</button>
-              <span class="hotel-card-stars two-stars"></span>
+              <span class="hotel-card-stars two-stars">
+                <span class="visually-hidden">2 звезды</span>
+              </span>
               <span class="rating-value">Рейтинг: 5,0</span>
             </li>
           </ul>
