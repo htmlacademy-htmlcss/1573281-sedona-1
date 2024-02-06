@@ -293,10 +293,6 @@ a.button:active:not(.button-disabled) {
   list-style-type: none;
 }
 
-.advantages-item {
-  position: relative;
-}
-
 .advantages-item:not(.advantages-item-accent){
   width: 400px;
   padding: 113px 84px;
@@ -306,15 +302,13 @@ a.button:active:not(.button-disabled) {
 .advantages-wrapper {
   width: 400px;
   padding: 101px 85px;
-  position: relative;
 }
 
-.advantages-wrapper::before {
-  position: absolute;
+.advantages-wrapper .advantages-title::after {
+  display: block;
   width: 60px;
   height: 2px;
-  top: 188px;
-  left: 170px;
+  margin: 30px auto;
   background-color: #ffffff;
   opacity: 0.3;
   content: "";
@@ -342,7 +336,6 @@ a.button:active:not(.button-disabled) {
 
 .advantages-title {
   margin: 0;
-  margin-bottom: 62px;
   padding: 0 29px;
   color: #000000;
   font-size: 24px;
@@ -350,12 +343,11 @@ a.button:active:not(.button-disabled) {
   text-transform: uppercase;
 }
 
-.advantages-item:not(.advantages-item-accent) .advantages-title::before{
-  position: absolute;
+.advantages-item:not(.advantages-item-accent) .advantages-title::after{
+  display: block;
   width: 60px;
   height: 2px;
-  top: 199px;
-  right: 170px;
+  margin: 30px auto;
   background-color: #000000;
   opacity: 0.3;
   content: "";
@@ -897,7 +889,7 @@ button.reset-button:active:not(:disabled) {
 }
 
 .select-wrapper {
-  margin-bottom: 38px;
+  margin-bottom: 41px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1010,7 +1002,7 @@ button.reset-button:active:not(:disabled) {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 16px 20px;
+  gap: 20px;
   list-style-type: none;
   margin-bottom: 80px;
 }
@@ -1020,7 +1012,7 @@ button.reset-button:active:not(:disabled) {
   grid-template-columns: repeat(2, 140px);
   gap: 16px 20px;
   align-items: start;
-  padding: 20px;
+  padding: 19px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
 }
@@ -1029,7 +1021,7 @@ button.reset-button:active:not(:disabled) {
   width: 300px;
   height: 212px;
   object-fit: contain;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .hotel-card-link {
@@ -1334,7 +1326,6 @@ button.favorite-button-active:hover:not(:disabled) {
 }
 
 .modal-fieldgroup {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1480,6 +1471,7 @@ button.favorite-button-active:hover:not(:disabled) {
 }
 
 .tooltip {
+  position: relative;
   margin-right: 46px;
 }
 
@@ -1499,11 +1491,12 @@ button.favorite-button-active:hover:not(:disabled) {
 
 .tooltip-text {
   position: absolute;
-  top: 53px;
-  left: -48px;
+  top: 39px;
+  left: 13px;
   display: none;
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 22px 22px;
+  transform: translateX(-50%);
   text-align: left;
   color: #ffffff;
   font-size: 16px;
@@ -1518,7 +1511,7 @@ button.favorite-button-active:hover:not(:disabled) {
   content: "";
   position: absolute;
   top: -9px;
-  right: 50%;
+  right: calc(50% - 19px / 2);
   width: 19px;
   height: 9px;
   background: url("../images/triangle.svg") no-repeat center;
